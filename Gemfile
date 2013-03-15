@@ -24,6 +24,10 @@ group :test do
   gem 'capybara', '1.1.2'
 end
 
+group :test do
+	gem 'factory_girl_rails', '4.1.0'
+  end
+
 group :production do
   gem 'pg', '0.12.2'
 end
@@ -36,3 +40,7 @@ end
 group :test do
 
 	end
+group :test do
+gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
+end

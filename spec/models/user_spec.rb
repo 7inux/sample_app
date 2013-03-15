@@ -4,7 +4,7 @@ describe User do
 
   before do
     @user = User.new(name: "Example User", email: "user@example.com", 
-                 password: "foobar", password_confirmation: "foobar")
+                     password: "foobar", password_confirmation: "foobar")
   end
 
   subject { @user }
@@ -113,6 +113,12 @@ describe "with a password that's too short" do
       it { should_not == user_for_invalid_password }
       specify { user_for_invalid_password.should be_false }
     end
+
+    describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+
 
 
   end
