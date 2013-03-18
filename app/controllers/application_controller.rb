@@ -7,8 +7,4 @@ class ApplicationController < ActionController::Base
     sign_out
     super
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> user-microposts
